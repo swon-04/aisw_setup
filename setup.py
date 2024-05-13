@@ -106,6 +106,7 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 if __name__ == "__main__":
+    
     while True:
         show_menu()
         select = input("원하는 작업의 메뉴를 입력해주세요: ")
