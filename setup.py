@@ -125,7 +125,7 @@ if __name__ == "__main__":
             menu3()
             input("엔터를 누르면 계속합니다.")
             clear_screen()
-        # 파이썬 matplotlib 라이브러리 설치
+        # matplotlib 라이브러리 설치
         elif select == '4':
             menu4()
             input("엔터를 누르면 계속합니다.")
