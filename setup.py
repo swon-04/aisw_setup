@@ -51,7 +51,6 @@ def menu3():
     print("6. ""Setup was successful""이 나오면 ""Close""를 눌러 종료합니다.")
     print()
 
-
 def menu4():
     clear_screen()
     result = check_matplotlib_installed()
