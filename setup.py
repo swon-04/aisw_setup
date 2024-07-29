@@ -9,17 +9,23 @@ def show_menu():
     print()
     print("조선대학교 AISW 교육센터")
     print()
-    print("1. 스파이크 프라임 2.0.10 설치")
+    print("1. 스파이크 프라임 2.0.10 설치(1기 전용)")
     print()
-    print("2. 레고 마인드 스톰 다운로드(Microsoft Store)")
+    print("2. 스파이크 프라임 3.4.3 설치")
     print()
-    print("3. 파이썬 3.12 다운로드")
+    print("3. 레고 마인드 스톰 다운로드(Microsoft Store)")
     print()
-    print("4. matplotlib 라이브러리 설치")
+    print("4. 파이썬 3.12 다운로드")
     print()
-    print("5. matplotlib 라이브러리 제거")
+    print("5. matplotlib 라이브러리 설치")
     print()
-    print("6. (강사전용)디지털새싹 URL 모음")
+    print("6. matplotlib 라이브러리 제거")
+    print()
+    print("7. 데이터 분석 소스 코드 다운로드")
+    print()
+    print("8. (강사전용)디지털새싹 URL 모음")
+    print()
+    print("9. 조선대학교 AISW 교육센터 디지털새싹")
     print()
     print("0. 종료")
     print()
@@ -27,12 +33,17 @@ def show_menu():
     print("*"*50)
 
 def menu1():
-    webbrowser.open("https://bit.ly/spike2")
+    print()
+    print("스파이크 프라임 2.0.10은 현재 사용하지 않습니다.")
+    print("이전으로 돌아갑니다.")
 
 def menu2():
-    webbrowser.open("https://bit.ly/get_mindstorms")
+    webbrowser.open("https://bit.ly/spike_3")
 
 def menu3():
+    webbrowser.open("https://bit.ly/get_mindstorms")
+
+def menu4():
     clear_screen()
     webbrowser.open("https://www.python.org/ftp/python/3.12.3/python-3.12.3-amd64.exe")
     print()
@@ -51,7 +62,7 @@ def menu3():
     print("6. ""Setup was successful""이 나오면 ""Close""를 눌러 종료합니다.")
     print()
 
-def menu4():
+def menu5():
     clear_screen()
     result = check_matplotlib_installed()
     if result == 0:
@@ -60,7 +71,7 @@ def menu4():
     elif result == 1:
         print("matplotlib가 이미 설치되어 있습니다.")
 
-def menu5():
+def menu6():
     clear_screen()
     result = check_matplotlib_installed()
     if result == 1:
@@ -71,6 +82,9 @@ def menu5():
         print("matplotlib가 설치되어 있지 않습니다.")
 
 def menu7():
+    webbrowser.open("https://bit.ly/cs_aisw_data")
+
+def menu8():
     while True:
         clear_screen()
         print("강사 코드를 입력해주세요.\n뒤로가기 : 0\n")
@@ -87,7 +101,9 @@ def menu7():
         else:
             print("잘못된 강사 코드입니다.")
             clear_screen()
-    
+
+def menu9():
+    webbrowser.open("https://swon-04.github.io/chosun/public")
 
 def check_matplotlib_installed():
     try:
@@ -110,40 +126,44 @@ if __name__ == "__main__":
         show_menu()
         select = input("원하는 작업의 메뉴를 입력해주세요: ")
 
-        # 스파이크 프라임 설치
         if select == '1':
             menu1()
             input("엔터를 누르면 계속합니다.")
             clear_screen()
-        # 레고 마인드 스톰 다운로드
         elif select == '2':
             menu2()
             input("엔터를 누르면 계속합니다.")
             clear_screen()
-        # 파이썬 3.12 다운로드
         elif select == '3':
             menu3()
             input("엔터를 누르면 계속합니다.")
             clear_screen()
-        # matplotlib 라이브러리 설치
         elif select == '4':
             menu4()
             input("엔터를 누르면 계속합니다.")
             clear_screen()
-        # matplotlib 라이브러리 제거
         elif select == '5':
             menu5()
             input("엔터를 누르면 계속합니다.")
             clear_screen()
-        # 강사 전용
         elif select == '6':
+            menu6()
+            input("엔터를 누르면 계속합니다.")
+            clear_screen()
+        elif select == '7':
             menu7()
             input("엔터를 누르면 계속합니다.")
             clear_screen()
-        # 종료
+        elif select == '8':
+            menu8()
+            input("엔터를 누르면 계속합니다.")
+            clear_screen()
+        elif select == '9':
+            menu9()
+            input("엔터를 누르면 계속합니다.")
+            clear_screen()
         elif select == '0':
             break
-        # 다른 입력
         else:
             print("잘못된 입력입니다. 다시 시도해주세요.")
             input("엔터를 누르면 계속합니다.")
